@@ -32,18 +32,20 @@ Quetz also comes with the `quetz-client` that can be used to upload packages to 
 
 You should have [mamba](https://github.com/mamba-org/mamba) or conda installed.
 
-Then create an environment:
-
-```
-mamba env create -f environment.yml
-
-conda activate quetz
-```
-
 Get `Quetz` sources:
 
 ```
 git clone https://github.com/mamba-org/quetz.git
+```
+
+Then create an environment:
+
+```
+cd quetz
+
+mamba env create -f environment.yml
+
+conda activate quetz
 ```
 
 Install `Quetz`:
@@ -51,7 +53,7 @@ Install `Quetz`:
 > Use the editable mode `-e` if you are developer and want to take advantage of the `reload` option of `Quetz`
 
 ```
-pip install -e quetz
+pip install -e .
 ```
 
 Use the CLI to create a `Quetz` instance:
